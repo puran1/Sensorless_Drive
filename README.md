@@ -14,33 +14,39 @@ We need to check whether some features are correlated to each other. We use Pand
 3.	Data Preprocessing
 We select features which have Pearson Coefficient greater than 0.9 with another feature as highly co related and drop from the list of features. “A7”, “A8”, “A10”, “A11”, “A13”, “A16”, “A19”, “A20”, “A21”, “A22”, “A23”, “A31”, “A32”, “A34”, “A35”, “A43”, “A44”, “A46”, “A47” are dependent on other features. So, it can be dropped. The dropping of the above columns do not change the distribution of “Class” column. The “Bar” diagram shows the distribution of different values of “Class”.
 
-   3.1.	Separating Independent and Dependent Variables
+  3.1.	Separating Independent and Dependent Variables
            
-        To analyze the data we create a matrix of independent variables which have 29 columns and “Class” is dependent variable.
-   3.2.	Encoding the Dependent Variable
+   To analyze the data we create a matrix of independent variables which have 29 columns and “Class” is dependent variable.
+   
+  3.2.	Encoding the Dependent Variable
           
-        Used label encoder to encode dependent variable to start at value 0 instead of 1
+   Used label encoder to encode dependent variable to start at value 0 instead of 1
+   
    3.3.	Splitting the dataset into the Training set and Test set
 
-        We divide both independent and dependent variables to Training Set and Test Set
+   We divide both independent and dependent variables to Training Set and Test Set
+   
    3.4.	Since independent variables have different scales, so we use feature scaling to make the data uniformly scaled.
    
    3.5.	Variable Summary
 
-        Next, we evaluate summary – count, mean, standard variation, minimum, 25, 50, 75 percentile, and maximum of each feature.
+   Next, we evaluate summary – count, mean, standard variation, minimum, 25, 50, 75 percentile, and maximum of each feature.
+   
    3.6.	Correlation Matrix
 
-        The relation among the features are depicted through Correlation Matrix
+   The relation among the features are depicted through Correlation Matrix
+
 4.	Model Building
 
     4.1.	Baseline Model
 
-          Performance of Logistic Regression classifier: Accuracy Score is 0.744 and Area under the curve is 0.962. “A9” is the most influential feature, followed by “A4”. 
-    4.2.	Recursive Feature Elimination
+    Performance of Logistic Regression classifier: Accuracy Score is 0.744 and Area under the curve is 0.962. “A9” is the most influential feature, followed by “A4”. 
 
-          Performance of Logistic Regression classifier with feature elimination: Accuracy Score is 0.744 and Area under the curve is 0.962. “A9” is the most influential feature, followed by “A4” in 
-          this case as well.
-     4.3.	Decision Tree Classifier
+  	 4.2.	Recursive Feature Elimination
+
+          Performance of Logistic Regression classifier with feature elimination: Accuracy Score is 0.744 and Area under the curve is 0.962. “A9” is the most influential feature, followed by “A4” in this case as well.
+  	
+    4.3.	Decision Tree Classifier
 
           Performance of Decision Tree classifier: Accuracy Score is 0.967 and Area under the curve is 0.997. “A12” is the most influential feature, followed by “A9”.
      4.4.	KNN Classifier
@@ -84,7 +90,7 @@ We select features which have Pearson Coefficient greater than 0.9 with another 
        4.15.	Bagging Classifier
 
               Performance of Bagging classifier: Accuracy Score is 0.991 and Area under the curve is 0.999.
-5.	Model Performances over the Training Dataset
+6.	Model Performances over the Training Dataset
 
     5.1.	Model Performance Metrics
 
@@ -96,7 +102,7 @@ We select features which have Pearson Coefficient greater than 0.9 with another 
      5.3.	Confusion Matrices for Models
 
           Heat map representation of the Confusion Matrix shows the deviation of values from the top left to bottom right diagonal.
-6.	Model Performances over the Test Dataset
+7.	Model Performances over the Test Dataset
 
      6.1.	Model Performance Metrics
 
