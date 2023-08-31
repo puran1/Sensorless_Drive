@@ -12,7 +12,7 @@ There are 11 classes in “Class” column and all the classes are equally distr
 2.2.	Variable Distribution
 We need to check whether some features are correlated to each other. We use Pandas Pearson correlation coefficient function corr() to determine the relation among different features.
 3.	Data Preprocessing
-We select features which have Pearson Coefficient greater than 0.9 with another feature as highly co related and drop from the list of features. “A7”, “A8”, “A10”, “A11”, “A13”, “A16”, “A19”, “A20”, “A21”, “A22”, “A23”, “A31”, “A32”, “A34”, “A35”, “A43”, “A44”, “A46”, “A47” are dependent on other features. So, it can be dropped. The dropping of the above columns do not change the distribution of “Class” column. The “Bar” diagram shows the distribution of different values of “Class”.
+We select features which have Pearson Coefficient greater than 0.9 with another feature as highly co related and drop from the list of features. “A7”, “A8”, “A10”, “A11”, “A13”, “A16”, “A19”, “A20”, “A21”, “A22”, “A23”, “A31”, “A32”, “A34”, “A35”, “A43”, “A44”, “A46”, “A47” are dependent on other features. These features would not bring much new information. So, it can be dropped. The dropping of the above columns do not change the distribution of “Class” column. The “Bar” diagram shows the distribution of different values of “Class”.
 
     3.1.	Separating Independent and Dependent Variables
            
